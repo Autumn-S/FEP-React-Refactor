@@ -17,11 +17,11 @@ function Search({ category, setCategory, searchTerm, setSearchTerm, setData }) {
   }, [category, setData]);
 
   return (
-    <div className="flex items-center justify-between gap-1">
+    <div className="flex items-center justify-between gap-1 text-black font-ubuntu">
       <input
         type="text"
         id="searchBar"
-        placeholder="Enter the name of a critter"
+        placeholder="Search by name..."
         className="block rounded-sm"
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.target.value)}
@@ -33,7 +33,7 @@ function Search({ category, setCategory, searchTerm, setSearchTerm, setData }) {
       />
       <select
         id="categorySelect"
-        className="block rounded-sm"
+        className="block rounded-sm font-ubuntu"
         value={category}
         onChange={(event) => setCategory(event.target.value)}
       >
@@ -41,8 +41,10 @@ function Search({ category, setCategory, searchTerm, setSearchTerm, setData }) {
         <option value="fish">Fish</option>
         <option value="bugs">Bugs</option>
         <option value="sea">Sea Creatures</option>
+        <option value="fossils">Fossils</option>
+        <option value="art">Art</option>
       </select>
-      <select id="hemisphereSelect" className="block rounded-sm">
+      <select id="hemisphereSelect" className="block rounded-sm font-ubuntu">
         <option value="">Select a hemisphere</option>
         <option value="northern">Northern Hemisphere</option>
         <option value="southern">Southern Hemisphere</option>
@@ -56,7 +58,7 @@ Search.propTypes = {
   setCategory: PropTypes.func,
   searchTerm: PropTypes.string,
   setSearchTerm: PropTypes.func,
-  setData: PropTypes.func,
+  setData: PropTypes.func.isRequired,
 };
 
 export default Search;

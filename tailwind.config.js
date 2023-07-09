@@ -4,8 +4,19 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        bacant: ['"Bacasime Antique"', "serif"],
+        ubuntu: ["Ubuntu", "sans-serif"],
         capras: ["Caprasimo", "cursive"],
+      },
+      colors: {
+        customGreen: "#73b38b",
+        customGray: "#acbc9c",
+        customGreenStart: "rgba(196, 220, 164, 1)",
+        customGreenMid: "rgba(186, 213, 164, 1)",
+        customGreenEnd: "rgba(148, 203, 156, 1)",
+      },
+      gradientColorStops: {
+        "custom-linear":
+          "linear-gradient(125deg, var(--color-start) 0%, var(--color-mid) 50%, var(--color-end) 100%)",
       },
     },
   },
